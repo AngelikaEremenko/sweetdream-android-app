@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="5dp"
+    app:strokeWidth="0dp"
+    app:cardBackgroundColor="@color/none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <ImageView
+            android:id="@+id/cake_img"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:src="@drawable/cake"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/cake_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Бакский чизкейк"
+                android:layout_marginTop="10dp"
+                android:textSize="18sp"
+                android:textColor="@color/chocolate"
+                android:textStyle="bold"/>
+
+            <LinearLayout
+                android:id="@+id/price_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="80dp"
+                android:background="@drawable/price_bg"
+                android:padding="10dp"
+                android:textColor="@color/chocolate"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ОТ "
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/cake_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="950"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" ₽"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/cake_deleteBtn"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/close_btn"
+                android:backgroundTint="@color/grey"
+                android:layout_toEndOf="@id/price_container"
+                android:layout_alignBottom="@id/price_container"
+                android:layout_marginStart="10dp" />
+
+        </RelativeLayout>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>
